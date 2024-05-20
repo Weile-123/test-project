@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+ }

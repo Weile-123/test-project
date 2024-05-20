@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4520092 */
+  src: url('./iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checked1:before {
+  content: "\ec91";
+}
+
+.icon-checked:before {
+  content: "\e615";
+}
+
+.icon-paixu-:before {
+  content: "\e601";
+}
+
+.icon-paixu-sanjiaoxingxia:before {
+  content: "\e622";
+}
+

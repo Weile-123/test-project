@@ -1,0 +1,75 @@
+
+@font-face {
+  font-family: 'baseFont';
+  src: url('../fonts/Merak-Free.ttf');
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-family: baseFont;
+  user-select: none;
+  background-color: $bgColor;
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#app {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+}
+.root_content{
+  min-height: 100vh;
+  width: 100vw;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  &.center {
+    justify-content: center;
+  }
+  
+  &.end {
+    justify-content: flex-end;
+  }
+  
+  &.start {
+    justify-content: flex-start;
+  }
+  
+  &.between {
+    justify-content: space-between;
+  }
+  &.around {
+    justify-content: space-around;
+  }
+  
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  
+  &.ali_start {
+    align-items: flex-start;
+  }
+  
+  &.ali_stretch {
+    align-items: stretch;
+  }
+  
+  &.ali_end {
+    align-items: flex-end;
+  }
+  
+  &.direction {
+    flex-direction: column;
+  }
+}
+::-webkit-scrollbar {
+  display: none !important;
+}

@@ -1,0 +1,24 @@
+.small_window{
+    .index_page{
+        .btn{
+            width: 5rem !important;
+            color: $mainColor !important;
+        }
+    }
+}
+.phone_window{
+    .index_page{
+        .btn{
+            width: 15rem !important;
+            color: blue !important;
+        }
+    }
+}
+.pad_window{
+    .index_page{
+        .btn{
+            width: 25rem !important;
+            color: green !important;
+        }
+    }
+}

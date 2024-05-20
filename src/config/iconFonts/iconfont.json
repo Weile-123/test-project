@@ -1,0 +1,37 @@
+{
+  "id": "4520092",
+  "name": "wy",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21399238",
+      "name": "checked",
+      "font_class": "checked1",
+      "unicode": "ec91",
+      "unicode_decimal": 60561
+    },
+    {
+      "icon_id": "23505842",
+      "name": "checked",
+      "font_class": "checked",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "2237846",
+      "name": "排序-01",
+      "font_class": "paixu-",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "28519675",
+      "name": "排序-三角形下",
+      "font_class": "paixu-sanjiaoxingxia",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}
