@@ -2,15 +2,15 @@
   <div class="index">
     <div class="top">
       <div class="box1">
-        <img src="/src/assets/主界面/Dollar@2x.png" alt="" />
+        <img src="/src/assets/main/Dollar@2x.png" alt="" />
         <span class="text">{{ '999.999BBB' }}</span>
       </div>
       <div class="box2">
-        <img src="/src/assets/主界面/diamond@2x.png" alt="" />
+        <img src="/src/assets/main/diamond@2x.png" alt="" />
         <span class="text">{{ '999B' }}</span>
       </div>
       <div class="box3">
-        <img src="/src/assets/主界面/gold@2x.png" alt="" />
+        <img src="/src/assets/main/gold@2x.png" alt="" />
         <span class="text">{{ '999B' }}</span>
       </div>
     </div>
@@ -33,93 +33,128 @@
         </div>
       </div>
     </div>
+    <!-- 侧边导航栏 -->
     <div class="sidebar">
-      <img class="img1" src="/src/assets/主界面/X1 buy@2x.png" alt="" />
+      <img class="img1" src="/src/assets/main/X1 buy@2x.png" alt="" />
       <div class="img2-box">
-        <img class="img2" src="/src/assets/主界面/Time Warp@2x.png" alt="" />
+        <img class="img2" src="/src/assets/main/Time Warp@2x.png" alt="" />
         <div class="text">Time Warp</div>
       </div>
       <div class="img3-box">
-        <img class="img3" src="/src/assets/主界面/boost@2x.png" alt="" />
+        <img class="img3" src="/src/assets/main/boost@2x.png" alt="" />
         <div class="text">Boost</div>
       </div>
       <div class="img4-box">
-        <img class="img4" src="/src/assets/主界面/Event@2x.png" alt="" />
+        <img class="img4" src="/src/assets/main/Event@2x.png" alt="" />
         <div class="text">Event</div>
       </div>
       <div class="img5-box">
         <div class="box">
-          <img
-            class="img5"
-            src="/src/assets/主界面/Quick  collection@2x.png"
-            alt=""
-          />
+          <img class="img5" src="/src/assets/main/Quick  collection@2x.png" alt="" />
         </div>
         <div class="text">Quick collection</div>
       </div>
     </div>
+    <!-- 设置页面 -->
+    <van-popup class="setting" v-model:show="showSet" position="bottom" :style="{ background: 'transparent' }">
+      <div class="list">
+        <div class="item" @click="setClick(item)" v-for="item in settingList" :key="item.text">{{ item.text }}</div>
+        <img @click="showSet = false" class="close" src="/src/assets/main1/btn_off@2x.png" alt="" />
+      </div>
+    </van-popup>
+    <!-- 底部导航栏 -->
+    <tabBar @tabBarClick="tabBarClick"></tabBar>
+    <!-- 引导页面 -->
+    <guide ref="guide"></guide>
   </div>
 </template>
 
 <script>
+import tabBar from '../components/tabBar.vue'
+import guide from '../components/guide.vue'
 export default {
-  data () {
+  components: {
+    tabBar,guide
+  },
+  data() {
     return {
+      settingList: [
+        { text: 'Ranking list', url: 'Ranking' },
+        { text: 'Boost', url: 'Boost' },
+        { text: 'Bot', url: 'Bots' },
+        { text: 'Whale Investors', url: '' },
+        { text: 'Spare', url: '' },
+        { text: 'Set up', url: 'setup' },
+      ], // 设置列表
+      showSet: false, // 显示设置页面
+      Total: 0, // 金币总数
       listData: [
         {
           code: 'ETH1',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'ETH2',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'ETH3',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'ETH4',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'NFY',
-          isDone:false
-        },{
+          isDone: false,
+        },
+        {
           code: 'ETH1',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'ETH2',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'ETH3',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'ETH4',
-          isDone:false
+          isDone: false,
         },
         {
           code: 'NFY',
-          isDone:false
-        }
-      ]
+          isDone: false,
+        },
+      ],
     }
   },
   methods: {
-    imgClick (item) {
-      if(item.isDone) return 
+    setClick(item) {
+      this.$router.push('/' + item.url)
+    },
+    imgClick(item) {
+      if (item.isDone) return
       item.isDone = true
-      this.$refs['progress-box' + item.code][0].style.cssText =
-        'animation:move 2s'
+      this.$refs['progress-box' + item.code][0].style.cssText = 'animation:move 2s linear'
       setTimeout(() => {
         this.$refs['progress-box' + item.code][0].style.cssText = ''
         item.isDone = false
       }, 2000)
-    }
-  }
+    },
+    tabBarClick(type) {
+      if (type === 1) {
+        this.$router.push('/Task')
+      } else if (type === 2) {
+        this.showSet = true
+      } else if (type === 3) {
+        this.$router.push('/shop')
+      }
+    },
+  },
 }
 </script>
 
@@ -140,6 +175,35 @@ export default {
   background: #01121f;
   padding-top: 37px;
   padding-left: 22px;
+  .setting {
+    height: 965px;
+    .list {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .item {
+        width: 383px;
+        height: 109px;
+        background: url('/src/assets/main1/btn_bg@2x.png');
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 36px;
+        color: #70c6fe;
+        margin: 3px 0;
+      }
+      .close {
+        width: 164px;
+        height: 35px;
+        width: 88px;
+        height: 88px;
+        margin-top: 40px;
+      }
+    }
+  }
   .sidebar {
     display: flex;
     align-items: self-end;
@@ -151,11 +215,10 @@ export default {
     width: 100px;
     padding-top: 122px;
     .text {
-        font-family: Oswald, Oswald;
-        font-weight: 500;
-        font-size: 16px;
-        text-align: center;
-      }
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+    }
     .img2-box {
       width: 88px;
       color: #b4931e;
@@ -174,7 +237,7 @@ export default {
       bottom: 230px;
       .box {
         width: 100px;
-          height: 100px;
+        height: 100px;
         .img5 {
           width: 100%;
           height: 100%;
@@ -182,7 +245,6 @@ export default {
       }
       .text {
         text-align: center;
-        font-family: Oswald, Oswald;
         font-weight: 500;
         font-size: 20px;
         color: #8e24f9;
@@ -212,7 +274,6 @@ export default {
     .text {
       font-size: 30px;
       color: #fff;
-      font-family: Oswald, Oswald;
       font-weight: 500;
       font-style: normal;
     }
@@ -235,7 +296,7 @@ export default {
       padding-left: 7px;
     }
   }
-  .list {
+  > .list {
     margin-top: 17px;
     height: calc(100vh - 300px);
     overflow: scroll;
@@ -245,7 +306,7 @@ export default {
       width: 618px;
       display: flex;
       align-items: center;
-      background: url('/src/assets/主界面/list\ box@2x.png');
+      background: url('/src/assets/main/list\ box@2x.png');
       background-size: 100% 100%;
       margin-bottom: 13px;
       .img {
@@ -272,7 +333,6 @@ export default {
           align-items: center;
           padding: 0 30px 0 5px;
           color: #011523;
-          font-family: Oswald, Oswald;
           font-weight: 500;
           font-size: 30px;
           font-style: normal;
@@ -282,7 +342,6 @@ export default {
         }
         .ItemName {
           color: #fff;
-          font-family: Oswald, Oswald;
           font-weight: 500;
           font-style: normal;
           font-size: 24px;
@@ -300,6 +359,17 @@ export default {
             overflow: hidden;
             border-radius: 14px 14px 14px 14px;
             border: 2px solid #127495;
+            padding-left: 60px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            .text {
+              position: absolute;
+              font-weight: 500;
+              font-size: 20px;
+              color: #f1f1f1;
+              z-index: 1;
+            }
             &-box {
               top: 0;
               position: absolute;
@@ -310,7 +380,6 @@ export default {
             }
           }
           .time {
-            font-family: Oswald, Oswald;
             font-weight: 500;
             font-size: 30px;
             font-style: normal;

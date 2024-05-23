@@ -1,4 +1,5 @@
 import axios from 'axios'
+import store from '../../store'
 import $g from '../common/index'
 let $config = import.meta.env
 let requestUrl = $config.VITE_BASE_URL;
@@ -14,11 +15,13 @@ let instance = axios.create({
 // 请求拦截
 instance.interceptors.request.use(function (config) {
   if(config.method == 'post'){
-    let token = $g.getStorage('token');
+    let token = store.state.user.initData;
+    console.log('----token-----',token)
     if(token){
-      config['data']['token'] = token
+      config.headers['Use-Agen'] = token
     }
   }
+    console.log('-----config-----',config)
     return config
   },
   function (err) {
@@ -36,9 +39,9 @@ instance.interceptors.response.use(
 );
 let api = {};
 
-api.post = (url, params = {}) => {
+api.post = (url, params = {},headers = {}) => {
   return new Promise((resolve, reject) => {
-    instance.post(url, params).then(async (res) => {
+    instance.post(url, params,headers).then(async (res) => {
       let ret = res
       if(res.data.code == -1){
         requestLength++

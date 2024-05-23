@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import router from './router'
 import store from './store'
-import {Toast ,Locale, PullRefresh} from 'vant';
+import {Toast ,Locale, PullRefresh,Popup,Switch,Overlay} from 'vant';
 import 'vant/lib/index.css';
 import enUS from 'vant/es/locale/lang/en-US';
 import $g from './config/common'
@@ -18,4 +18,4 @@ app.config.globalProperties.$api = $api;
 app.config.globalProperties.$config = import.meta.env;
 window.document.title = import.meta.env.VITE_APP_NAME
 
-app.use(router).use(store).use(Toast).use(PullRefresh).mount('#app')
+app.use(router).use(store).use(Toast).use(PullRefresh).use(Popup).use(Switch).use(Overlay).mount('#app')

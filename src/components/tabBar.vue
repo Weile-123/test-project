@@ -1,14 +1,23 @@
 <template>
   <div class="tabBar">
-    <img class="img1" src="/src/assets/主界面/btn_friend@2x.png" alt="">
-    <img class="img2" src="/src/assets/主界面/btn_Expand@2x.png" alt="">
-    <img class="img3" src="/src/assets/主界面/btn_shop@2x.png" alt="">
+    <img @click="tabBarClick(1)" class="img1" src="/src/assets/main/btn_friend@2x.png" alt="">
+    <img @click="tabBarClick(2)" class="img2" src="/src/assets/main/btn_Expand@2x.png" alt="">
+    <img @click="tabBarClick(3)" class="img3" src="/src/assets/main/btn_shop@2x.png" alt="">
   </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+      return {
+        
+      }
+    },
+    methods:{
+      tabBarClick(type){
+        this.$emit('tabBarClick',type)
+      }
+    }
 }
 </script>
 

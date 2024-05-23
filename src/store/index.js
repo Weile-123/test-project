@@ -2,7 +2,11 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     sourceMsg:{},
-    walletInfo:{}
+    walletInfo:{},
+    user:{
+      userInfo:{},
+      initData:''
+    }
   },
   mutations: {
     SAVE_RESOURCE(state,msg){
