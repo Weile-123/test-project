@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      show: true,
+      show: false,
       type: 1, // 1.引导收取
     }
   },

@@ -38,7 +38,7 @@ export default {
       winHeight: 0,
       pageSizeRate: 1,
       startStep: 0,
-      showStartPage: false,
+      showStartPage: true,
       showUpdatePage: false,
       ts: 0,
     }
@@ -121,6 +121,7 @@ export default {
             this.startStep = this.startStep + itemAdd
             imgsObj[loadingSourceArr[i].name] = await this.$g.loadImg(loadingSourceArr[i].path)
           }
+          console.log('imgsObj=====================',imgsObj);
           this.$store.dispatch('saveResource', imgsObj)
           return resolve()
         } catch (error) {

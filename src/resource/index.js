@@ -1,9 +1,189 @@
 let resource = {
     first:[
         {
+            name:'zu37',
+            path:'/imgs/组 37@2x.png'
+        },
+        {
+            name:'X1 buy@2x',
+            path:'/imgs/X1 buy@2x.png'
+        },
+        {
+            name:'wallet_2@2x',
+            path:'/imgs/wallet_2@2x.png'
+        },
+        {
+            name:'wallet_1@2x',
+            path:'/imgs/wallet_1@2x.png'
+        },
+        {
+            name:'wallet@3x',
+            path:'/imgs/wallet@3x.png'
+        },
+        {
+            name:'WALLET@2x',
+            path:'/imgs/WALLET@2x.png'
+        },
+        {
+            name:'two@2x',
+            path:'/imgs/two@2x.png'
+        },
+        {
+            name:'tt_channel@2x',
+            path:'/imgs/tt_channel@2x.png'
+        },
+        {
+            name:'TON_null@2x',
+            path:'/imgs/TON_null@2x.png'
+        },
+        {
+            name:'TON-@2x',
+            path:'/imgs/TON-@2x.png'
+        },
+        {
+            name:'title_bg',
+            path:'/imgs/title_bg.png'
+        },
+        {
+            name:'Time Warp@2x',
+            path:'/imgs/Time Warp@2x.png'
+        },
+        {
+            name:'TG CHANNEL@2x',
+            path:'/imgs/TG CHANNEL@2x.png'
+        },
+        {
+            name:'Squad_2@2x',
+            path:'/imgs/Squad_2@2x.png'
+        },
+        {
+            name:'squad_1@2x',
+            path:'/imgs/squad_1@2x.png'
+        },
+        {
+            name:'squad@2x',
+            path:'/imgs/squad@2x.png'
+        },
+        {
+            name:'rank_rule_1@2x',
+            path:'/imgs/rank_rule_1@2x.png'
+        },
+        {
+            name:'Quick  collection@2x',
+            path:'/imgs/Quick  collection@2x.png'
+        },
+        {
+            name:'pesonal_1@2x',
+            path:'/imgs/pesonal_1@2x.png'
+        },
+        {
+            name:'personal@2x',
+            path:'/imgs/personal@2x.png'
+        },
+        {
+            name:'one@2x',
+            path:'/imgs/one@2x.png'
+        },
+        {
+            name:'Megatoken1@2x',
+            path:'/imgs/Megatoken1@2x.png'
+        },
+        {
+            name:'Megatoken@2x',
+            path:'/imgs/Megatoken@2x.png'
+        },
+        {
+            name:'list box_1@2x',
+            path:'/imgs/list box_1@2x.png'
+        },
+        {
+            name:'list box@2x',
+            path:'/imgs/list box@2x.png'
+        },
+        {
+            name:'Invite_1@2x',
+            path:'/imgs/Invite_1@2x.png'
+        },
+        {
+            name:'Invite@2x',
+            path:'/imgs/Invite@2x.png'
+        },
+        {
+            name:'Investors1@2x',
+            path:'/imgs/Investors1@2x.png'
+        },
+        {
+            name:'Investors_null@2x',
+            path:'/imgs/Investors_null@2x.png'
+        },
+        {
+            name:'GROUP@2x',
+            path:'/imgs/GROUP@2x.png'
+        },
+        {
+            name:'gold@2x',
+            path:'/imgs/gold@2x.png'
+        },
+        {
+            name:'Finish@2x',
+            path:'/imgs/Finish@2x.png'
+        },
+        {
+            name:'Event@2x',
+            path:'/imgs/Event@2x.png'
+        },
+        {
+            name:'Dollar@2x',
+            path:'/imgs/Dollar@2x.png'
+        },
+        {
+            name:'diamond@2x',
+            path:'/imgs/diamond@2x.png'
+        },
+        {
+            name:'Daily_1@2x',
+            path:'/imgs/Daily_1@2x.png'
+        },
+        {
+            name:'Daily@2x',
+            path:'/imgs/Daily@2x.png'
+        },
+        {
+            name:'btn_shop@2x',
+            path:'/imgs/btn_shop@2x.png'
+        },
+        {
+            name:'btn_off@2x',
+            path:'/imgs/btn_off@2x.png'
+        },
+        {
+            name:'btn_friend@2x',
+            path:'/imgs/btn_friend@2x.png'
+        },
+        {
+            name:'btn_Expand@2x',
+            path:'/imgs/btn_Expand@2x.png'
+        },
+        {
+            name:'btn_bg@2x',
+            path:'/imgs/btn_bg@2x.png'
+        },
+        {
+            name:'boot frame',
+            path:'/imgs/boot frame.png'
+        },
+        {
+            name:'boost@2x',
+            path:'/imgs/boost@2x.png'
+        },
+        {
+            name:'arrow',
+            path:'/imgs/arrow.png'
+        },
+        {
             name:'AllOrderBtn',
             path:'/imgs/AllOrderBtn.png'
-        }
+        },
     ],
     second:{
         name:'AllOrderBtn',

@@ -16,7 +16,6 @@
         <div class="progress_bar_point_item progress_bar_right_top_point"></div>
         <div class="progress_bar_point_item progress_bar_right_botom_point"></div>
         <div class="flex progress_bar_main">
-          {{ step }}
           <div :class="['progress_bar_item',step>= index && 'show_item']" v-for="(item,index) in 25" :key="index"></div>
         </div>
       </div>
@@ -56,7 +55,15 @@ export default {
   position: relative;
   width: 10rem;
   height: 10rem;
-  margin: 3rem auto;
+  margin: 2rem auto;
+}
+@media screen and (min-width: 586px) and (max-width: 10000px){
+  .ani_content{
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
+}
 }
 .loading_back img{
   width: 10rem;
@@ -97,9 +104,11 @@ export default {
   width: 100vw;
   height: 100vh;
   z-index: 3000;
-  padding-top: 10vh;
+  padding: 10vh 0;
   box-sizing: border-box;
   background-image: url('/src/assets/start/bg@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
@@ -272,4 +281,5 @@ export default {
     opacity: 0.2;
   }
 }
+
 </style>
